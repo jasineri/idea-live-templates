@@ -1,5 +1,5 @@
 <templateSet group="user">
-  <template name="sing" value="private static $className$ instance;&#10;&#10;private $className$() {&#10;    throw new AssertionError();&#10;}&#10;&#10;public static $className$ getInstance() {&#10;    if (instance == null) {&#10;        synchronized ($className$.class) {&#10;            if (instance == null) {&#10;                instance = new $className$();&#10;            }&#10;        }&#10;    }&#10;    return instance;&#10;}" description="Creates a Singleton pattern" toReformat="false" toShortenFQNames="true">
+  <template name="sing" value="private static $className$ instance;&#10;&#10;private $className$() {}&#10;&#10;public static $className$ getInstance() {&#10;    if (instance == null) {&#10;        synchronized ($className$.class) {&#10;            if (instance == null) {&#10;                instance = new $className$();&#10;            }&#10;        }&#10;    }&#10;    return instance;&#10;}" description="Creates a Singleton pattern" toReformat="false" toShortenFQNames="true">
     <variable name="className" expression="className()" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_DECLARATION" value="true" />
